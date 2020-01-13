@@ -1,26 +1,29 @@
 import React, { Component} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './home';
-import LogIn from './LogIn';
+import LogIn from './logIn';
 import SignUp from './signUp';
+import './index.css';
 
 class App extends Component {
     render() {
         return (
             <Router>
-                <nav className="navbar">
+                <div className="nav-bar">
                     <Link to="/">
-                        <button>HWOverflow</button>
+                        <a className="logo">HWOverflow</a>
                     </Link>
-                    <input
-                        type="text"
-                        className="input"
-                        placeholder="Search..."
-                    />
+                    <div className="search-container">
+                        <input
+                            type="text"
+                            placeholder="Search..."
+                        />
+                        <button type="submit"><i class="material-icons">search</i></button>
+                    </div>
                     <Link to="/LogIn">
-                        <button>LogIn</button>
+                            <a className="login">Log In</a>
                     </Link>
-                </nav>
+                </div>
                 <hr />
                 <Switch>
                     <Route exact path='/' component={Home} />
