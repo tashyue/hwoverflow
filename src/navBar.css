@@ -4,15 +4,17 @@
     overflow: hidden;
     color: white;
     display: block;
+    width: 100%;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .nav-bar a {
     float: left;
     text-align: center;
-    padding: 8px 10px;
+    padding: 8px 4px;
     color: white;
     font-size: 17px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .nav-bar a:hover {
@@ -23,11 +25,12 @@
 .nav-bar .search-container {
     float: right;
 }
-.nav-bar input[type=text] {
+.search-container input[type=text] {
     padding: 8px 16px;
     border-radius: 25px;
     margin-top: 10px;
     border: none;
+    width: 200px;
 }
 .search-container button {
     float: right;
