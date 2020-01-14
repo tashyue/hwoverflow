@@ -4,6 +4,7 @@ import Home from './components/home';
 import LogIn from './components/logIn';
 import SignUp from './components/signUp';
 import './style/navBar.css';
+import VideoThumbnail from './components/videoThumbnail';
 
 class App extends Component {
     render() {
@@ -36,6 +37,7 @@ class App extends Component {
                     <Route exact path='/' component={Home} />
                     <Route path='/LogIn' component={LogIn} />
                     <Route path='/SignUp' component={SignUp} />
+                    <Route path='/Dashboard' component = {VideoThumbnail} />
                 </Switch>
             </Router>
         )
