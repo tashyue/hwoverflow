@@ -19,7 +19,9 @@ class LogIn extends Component {
                         placeholder="Enter password"
                     />
                 </div>
-                <button>Log In!</button>
+                <Link to="/Dashboard">
+                    <button>Log In!</button>
+                </Link>
                 <Link to="/SignUp">
                     <button>Don't have an account? Sign Up!</button>
                 </Link>
