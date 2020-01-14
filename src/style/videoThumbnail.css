@@ -34,8 +34,8 @@
 .profile-photo {
     margin: 0px auto;
     background-color: blue;
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     border-radius: 25px;
     border: 1px solid black;
     display: inline-block;
@@ -46,7 +46,7 @@
     margin: 0px 4px;
     max-width: 185px;
     position: relative;
-    top: -15px;
+    top: -5px;
 }
 
 .username {
