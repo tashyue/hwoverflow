@@ -1,9 +1,9 @@
 import React, { Component} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Home from './home';
-import LogIn from './logIn';
-import SignUp from './signUp';
-import './navBar.css';
+import Home from './components/home';
+import LogIn from './components/logIn';
+import SignUp from './components/signUp';
+import './style/navBar.css';
 
 class App extends Component {
     render() {
@@ -24,7 +24,14 @@ class App extends Component {
                             <a className="login">Log In</a>
                     </Link>
                 </div>
-                <hr />
+                <div className="footer">
+                    <h2>About Us</h2>
+                    <h3>
+                        Quick description of our product for 
+                        people to see on the home page of the website
+                    </h3>
+                </div>
+                {/* <hr /> */}
                 <Switch>
                     <Route exact path='/' component={Home} />
                     <Route path='/LogIn' component={LogIn} />
