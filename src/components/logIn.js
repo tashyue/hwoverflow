@@ -5,9 +5,12 @@ class LogIn extends Component {
     render() {
         return (
             <div className="content">
-                <h1>Welcome back!</h1>
-                <h2>Fill in the information to sign in</h2>
-                <div className="input">
+                <div className="greeting-container">
+                    <h1>Welcome back!</h1>
+                    <h2>Fill in the information to sign in</h2>
+                </div>
+                <div className="input-container">
+                    <form>
                     <input
                         className="input"
                         type="text"
@@ -15,14 +18,18 @@ class LogIn extends Component {
                     />
                     <input
                         className="input"
-                        type="text"
+                        type="password"
                         placeholder="Enter password"
                     />
+                    <button className="large-button">Log In!</button>
+                    </form>
                 </div>
-                <button>Log In!</button>
-                <Link to="/SignUp">
-                    <button>Don't have an account? Sign Up!</button>
-                </Link>
+                <div className="account">
+                    <p>Don't have an account? </p>
+                    <Link to="/SignUp">
+                        <a>Sign Up!</a>
+                    </Link>
+                </div>
             </div>
         )
     }

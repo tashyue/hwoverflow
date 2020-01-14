@@ -1,3 +1,7 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .nav-bar {
     background-color:  #707070;
     overflow: hidden;
@@ -7,7 +11,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 .nav-bar a {
@@ -15,11 +19,10 @@
     text-align: center;
     padding: 8px 4px;
     color: white;
-    font-size: 17px;
+    font-size: 1em;
 }
 
 .nav-bar a:hover {
-    /* background-color: #dddddd; */
     color: black;
 }
 
@@ -46,7 +49,7 @@
     background-color: #707070;
     border: none;
     color: white;
-    font-size: 17px;
+    font-size: 1em;
 }
 
 .search-container button:hover {
@@ -62,16 +65,16 @@
     bottom: 0;
     width: 100%;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 .footer h2 {
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: normal;
 }
 
 .footer h3 {
-    font-size: 12px;
+    font-size: .75em;
     font-weight: lighter;
     padding-bottom: 16px;
 }
