@@ -5,6 +5,7 @@ import LogIn from './components/logIn';
 import SignUp from './components/signUp';
 import './style/navBar.css';
 import VideoThumbnail from './components/videoThumbnail';
+import Dashboard from './components/dashboard';
 
 class App extends Component {
     render() {
@@ -15,11 +16,13 @@ class App extends Component {
                         <a className="logo">HWOverflow</a>
                     </Link>
                     <div className="search-container">
-                        <input
-                            type="text"
-                            placeholder="Search..."
-                        />
-                        <button type="submit"><i class="material-icons">search</i></button>
+                        <form className="search">
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                            />
+                            <button type="submit"><i class="material-icons">search</i></button>
+                        </form>
                     </div>
                     <Link to="/LogIn">
                             <a className="login">Log In</a>
@@ -37,7 +40,7 @@ class App extends Component {
                     <Route exact path='/' component={Home} />
                     <Route path='/LogIn' component={LogIn} />
                     <Route path='/SignUp' component={SignUp} />
-                    <Route path='/Dashboard' component = {VideoThumbnail} />
+                    <Route path='/Dashboard' component = {Dashboard} />
                 </Switch>
             </Router>
         )

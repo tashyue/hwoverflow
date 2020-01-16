@@ -11,7 +11,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    height: 50px;
 }
 
 .nav-bar a {
@@ -20,6 +20,8 @@
     padding: 8px 4px;
     color: white;
     font-size: 1em;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .nav-bar a:hover {
@@ -33,6 +35,9 @@
 .nav-bar .search-container {
     float: right;
     margin-right: 12px;
+    position: relative;
+    
+    /* width: 45%; */
 }
 
 .search-container input[type=text] {
@@ -40,7 +45,6 @@
     border-radius: 25px;
     margin-top: 10px;
     border: none;
-    width: 200px;
 }
 
 .search-container button {

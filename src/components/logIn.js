@@ -21,7 +21,9 @@ class LogIn extends Component {
                         type="password"
                         placeholder="Enter password"
                     />
-                    <button className="large-button">Log In!</button>
+                    <Link to="/Dashboard">
+                        <button className="large-button">Log In!</button>
+                    </Link>
                     </form>
                 </div>
                 <div className="account">

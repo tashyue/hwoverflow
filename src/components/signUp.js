@@ -9,8 +9,8 @@ class SignUp extends Component {
                 <div className="greeting-container">
                     <h1>Welcome!</h1>
                     <h2>
-                        Create your new account by filling
-                        in the following information
+                        Create your new account by <br /> 
+                        filling in the following information
                     </h2>
                 </div>
                 <div className="input-container">
