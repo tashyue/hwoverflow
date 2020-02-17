@@ -13,6 +13,10 @@
     border: 1px solid black;
 }
 
+.video-thumbnail:hover {
+    cursor: pointer;
+}
+
 .video-info-container {
     margin-top: 0px;
     margin: 0px 0px;
