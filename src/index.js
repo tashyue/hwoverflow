@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Link } from 'react-router-dom';
-import App from './app';
+import { Link } from 'react-router-dom/Link';
+import App from './App';
 
 ReactDOM.render(
   <App />,

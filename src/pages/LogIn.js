@@ -1,31 +1,32 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import withStyles from '@material-ui/core/styles/withStyles';
+import PropTypes from 'prop-types';
+
+import Grid from '@material-ui/core/Grid';
+
+const styles = {
+    textAlign: 'center'
+}
+
 
 class LogIn extends Component {
     render() {
+        const { classes } = this.props;
         return (
-            <div className="content">
-                <h1>Welcome back!</h1>
-                <h2>Fill in the information to sign in</h2>
-                <div className="input">
-                    <input
-                        className="input"
-                        type="text"
-                        placeholder="Enter email address"
-                    />
-                    <input
-                        className="input"
-                        type="text"
-                        placeholder="Enter password"
-                    />
-                </div>
-                <button>Log In!</button>
-                <Link to="/SignUp">
-                    <button>Don't have an account? Sign Up!</button>
-                </Link>
-            </div>
+            <Grid container className={classes.form}>
+                <Grid item sm/>
+                <Grid item sm>
+                    <p>yooooo</p>
+                </Grid>
+                <Grid item sm/>
+            </Grid>
         )
     }
 }
 
-export default LogIn;
+LogIn.propTypes = {
+    classes:PropTypes.object.isRequired
+}
+
+export default withStyles(styles)(LogIn);

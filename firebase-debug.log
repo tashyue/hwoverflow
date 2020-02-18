@@ -1,0 +1,344 @@
+[debug] [2020-01-31T03:32:46.298Z] ----------------------------------------------------------------------
+[debug] [2020-01-31T03:32:46.300Z] Command:       /usr/local/Cellar/node/12.10.0/bin/node /usr/local/bin/firebase serve
+[debug] [2020-01-31T03:32:46.300Z] CLI Version:   7.11.0
+[debug] [2020-01-31T03:32:46.300Z] Platform:      darwin
+[debug] [2020-01-31T03:32:46.300Z] Node Version:  v12.10.0
+[debug] [2020-01-31T03:32:46.301Z] Time:          Thu Jan 30 2020 19:32:46 GMT-0800 (Pacific Standard Time)
+[debug] [2020-01-31T03:32:46.301Z] ----------------------------------------------------------------------
+[debug] [2020-01-31T03:32:46.301Z] 
+[debug] [2020-01-31T03:32:46.309Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-31T03:32:46.309Z] > authorizing via signed-in user
+[debug] [2020-01-31T03:32:46.310Z] [iam] checking project hwoverflow-app for permissions ["firebase.projects.get"]
+[debug] [2020-01-31T03:32:46.311Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/hwoverflow-app:testIamPermissions  
+
+[debug] [2020-01-31T03:32:46.456Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-31T03:32:46.458Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/hwoverflow-app  
+ 
+[debug] [2020-01-31T03:32:46.601Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/tashyue/Desktop/hwoverflow'...
+[info] 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "/Users/tashyue/Desktop/hwoverflow/functions" for Cloud Functions...
+[debug] [2020-01-31T03:32:46.882Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-01-31T03:32:46.882Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-01-31T03:32:46.882Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-01-31T03:32:46.882Z] [worker-~diagnostic~-87985e0e-d544-4dce-a4ff-e32332fb4d96]: Assigning socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87170.sock
+[debug] [2020-01-31T03:32:46.883Z] [worker-~diagnostic~-87985e0e-d544-4dce-a4ff-e32332fb4d96]: BUSY
+[debug] [2020-01-31T03:32:47.039Z] [runtime-status] [87170] Functions runtime initialized. {"cwd":"/Users/tashyue/Desktop/hwoverflow/functions","node_version":"12.10.0"}
+[debug] [2020-01-31T03:32:47.040Z] [runtime-status] [87170] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-01-31T03:32:47.041Z] [runtime-status] [87170] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-01-31T03:32:47.042Z] [runtime-status] [87170] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-01-31T03:32:47.042Z] [runtime-status] [87170] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (/Users/tashyue/Desktop/hwoverflow/functions/node_modules/express/lib/router/route.js:202:15)
+    at Function.app.<computed> [as post] (/Users/tashyue/Desktop/hwoverflow/functions/node_modules/express/lib/application.js:482:19)
+    at Object.<anonymous> (/Users/tashyue/Desktop/hwoverflow/functions/index.js:31:5)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-01-31T03:32:47.372Z] [worker-~diagnostic~-87985e0e-d544-4dce-a4ff-e32332fb4d96]: exited
+[debug] [2020-01-31T03:32:47.372Z] [worker-~diagnostic~-87985e0e-d544-4dce-a4ff-e32332fb4d96]: FINISHED
+[debug] [2020-01-31T03:34:00.557Z] File /Users/tashyue/Desktop/hwoverflow/functions/index.js changed, reloading triggers
+[debug] [2020-01-31T03:34:01.561Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-01-31T03:34:01.565Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-01-31T03:34:01.565Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-01-31T03:34:01.565Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-01-31T03:34:01.566Z] [worker-~diagnostic~-ccb17954-3dfa-4745-8cec-5b04cdf0f013]: Assigning socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87216.sock
+[debug] [2020-01-31T03:34:01.566Z] [worker-~diagnostic~-ccb17954-3dfa-4745-8cec-5b04cdf0f013]: BUSY
+[debug] [2020-01-31T03:34:01.731Z] [runtime-status] [87216] Functions runtime initialized. {"cwd":"/Users/tashyue/Desktop/hwoverflow/functions","node_version":"12.10.0"}
+[debug] [2020-01-31T03:34:01.732Z] [runtime-status] [87216] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-01-31T03:34:01.733Z] [runtime-status] [87216] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-01-31T03:34:01.734Z] [runtime-status] [87216] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-01-31T03:34:01.734Z] [runtime-status] [87216] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  ReferenceError: FBAUth is not defined
+    at Object.<anonymous> (/Users/tashyue/Desktop/hwoverflow/functions/index.js:32:18)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-01-31T03:34:02.086Z] [worker-~diagnostic~-ccb17954-3dfa-4745-8cec-5b04cdf0f013]: exited
+[debug] [2020-01-31T03:34:02.086Z] [worker-~diagnostic~-ccb17954-3dfa-4745-8cec-5b04cdf0f013]: FINISHED
+[debug] [2020-01-31T03:34:17.403Z] File /Users/tashyue/Desktop/hwoverflow/functions/index.js changed, reloading triggers
+[debug] [2020-01-31T03:34:18.406Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-01-31T03:34:18.409Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-01-31T03:34:18.410Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-01-31T03:34:18.410Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-01-31T03:34:18.410Z] [worker-~diagnostic~-5b594d00-48d2-4fa7-becf-18c6e6ec052e]: Assigning socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87226.sock
+[debug] [2020-01-31T03:34:18.410Z] [worker-~diagnostic~-5b594d00-48d2-4fa7-becf-18c6e6ec052e]: BUSY
+[debug] [2020-01-31T03:34:18.572Z] [runtime-status] [87226] Functions runtime initialized. {"cwd":"/Users/tashyue/Desktop/hwoverflow/functions","node_version":"12.10.0"}
+[debug] [2020-01-31T03:34:18.574Z] [runtime-status] [87226] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-01-31T03:34:18.575Z] [runtime-status] [87226] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-01-31T03:34:18.576Z] [runtime-status] [87226] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-01-31T03:34:18.576Z] [runtime-status] [87226] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-functions/lib/index.js"}
+[info] ✔  functions[api]: http function initialized (http://localhost:5000/hwoverflow-app/us-central1/api).
+[debug] [2020-01-31T03:34:18.885Z] [worker-~diagnostic~-5b594d00-48d2-4fa7-becf-18c6e6ec052e]: IDLE
+[debug] [2020-01-31T03:34:24.939Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-01-31T03:34:24.939Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-01-31T03:34:24.940Z] Accepted request GET /hwoverflow-app/us-central1/api/questions/post --> api
+[debug] [2020-01-31T03:34:24.944Z] [worker-pool] addWorker(api)
+[debug] [2020-01-31T03:34:24.944Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-01-31T03:34:24.944Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-01-31T03:34:24.944Z] [worker-api-d9bb6a04-cd32-49c1-a7f7-bf40fd3b4022]: Assigning socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87227.sock
+[debug] [2020-01-31T03:34:24.944Z] [worker-api-d9bb6a04-cd32-49c1-a7f7-bf40fd3b4022]: BUSY
+[debug] [2020-01-31T03:34:25.098Z] [runtime-status] [87227] Functions runtime initialized. {"cwd":"/Users/tashyue/Desktop/hwoverflow/functions","node_version":"12.10.0"}
+[debug] [2020-01-31T03:34:25.099Z] [runtime-status] [87227] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-01-31T03:34:25.100Z] [runtime-status] [87227] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-01-31T03:34:25.100Z] [runtime-status] [87227] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-01-31T03:34:25.101Z] [runtime-status] [87227] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-01-31T03:34:25.385Z] [runtime-status] [87227] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-01-31T03:34:25.386Z] [runtime-status] [87227] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-01-31T03:34:25.386Z] [runtime-status] [87227] Running api in mode HTTPS
+[debug] [2020-01-31T03:34:25.388Z] [runtime-status] [87227] Attempting to listen to socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87227.sock
+[debug] [2020-01-31T03:34:25.391Z] [functions] Runtime ready! Sending request!
+[debug] [2020-01-31T03:34:25.399Z] [runtime-status] [87227] Ephemeral server handling GET request
+[debug] [2020-01-31T03:34:25.404Z] [runtime-status] [87227] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-01-31T03:34:25.405Z] [worker-api-d9bb6a04-cd32-49c1-a7f7-bf40fd3b4022]: IDLE
+[debug] [2020-01-31T03:34:25.405Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-01-31T03:37:37.219Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-01-31T03:37:37.219Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-01-31T03:37:37.219Z] Accepted request GET /hwoverflow-app/us-central1/api/questions/post --> api
+[debug] [2020-01-31T03:37:37.219Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-01-31T03:37:37.219Z] [worker-api-d9bb6a04-cd32-49c1-a7f7-bf40fd3b4022]: Assigning socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87227.sock
+[debug] [2020-01-31T03:37:37.219Z] [worker-api-d9bb6a04-cd32-49c1-a7f7-bf40fd3b4022]: BUSY
+[debug] [2020-01-31T03:37:37.220Z] [runtime-status] [87227] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-01-31T03:37:37.220Z] [runtime-status] [87227] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-01-31T03:37:37.220Z] [runtime-status] [87227] Running api in mode HTTPS
+[debug] [2020-01-31T03:37:37.221Z] [runtime-status] [87227] Attempting to listen to socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87227.sock
+[debug] [2020-01-31T03:37:37.222Z] [functions] Runtime ready! Sending request!
+[debug] [2020-01-31T03:37:37.225Z] [runtime-status] [87227] Ephemeral server handling GET request
+[debug] [2020-01-31T03:37:37.226Z] [runtime-status] [87227] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-01-31T03:37:37.227Z] [worker-api-d9bb6a04-cd32-49c1-a7f7-bf40fd3b4022]: IDLE
+[debug] [2020-01-31T03:37:37.227Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-01-31T03:40:50.562Z] File /Users/tashyue/Desktop/hwoverflow/functions/handlers/questions.js changed, reloading triggers
+[debug] [2020-01-31T03:40:51.565Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-01-31T03:40:51.565Z] [worker-~diagnostic~-5b594d00-48d2-4fa7-becf-18c6e6ec052e]: FINISHING
+[debug] [2020-01-31T03:40:51.565Z] [worker-pool] Shutting down IDLE worker (api)
+[debug] [2020-01-31T03:40:51.565Z] [worker-api-d9bb6a04-cd32-49c1-a7f7-bf40fd3b4022]: FINISHING
+[debug] [2020-01-31T03:40:51.570Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-01-31T03:40:51.570Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-01-31T03:40:51.570Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-01-31T03:40:51.570Z] [worker-~diagnostic~-558a859c-3174-4634-a792-1dbf48653e46]: Assigning socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87373.sock
+[debug] [2020-01-31T03:40:51.570Z] [worker-~diagnostic~-558a859c-3174-4634-a792-1dbf48653e46]: BUSY
+[debug] [2020-01-31T03:40:51.573Z] [worker-~diagnostic~-5b594d00-48d2-4fa7-becf-18c6e6ec052e]: exited
+[debug] [2020-01-31T03:40:51.573Z] [worker-~diagnostic~-5b594d00-48d2-4fa7-becf-18c6e6ec052e]: FINISHED
+[debug] [2020-01-31T03:40:51.573Z] [worker-api-d9bb6a04-cd32-49c1-a7f7-bf40fd3b4022]: exited
+[debug] [2020-01-31T03:40:51.573Z] [worker-api-d9bb6a04-cd32-49c1-a7f7-bf40fd3b4022]: FINISHED
+[debug] [2020-01-31T03:40:51.892Z] [runtime-status] [87373] Functions runtime initialized. {"cwd":"/Users/tashyue/Desktop/hwoverflow/functions","node_version":"12.10.0"}
+[debug] [2020-01-31T03:40:51.893Z] [runtime-status] [87373] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-01-31T03:40:51.895Z] [runtime-status] [87373] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-01-31T03:40:51.896Z] [runtime-status] [87373] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-01-31T03:40:51.897Z] [runtime-status] [87373] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-01-31T03:40:52.609Z] [worker-~diagnostic~-558a859c-3174-4634-a792-1dbf48653e46]: IDLE
+[debug] [2020-01-31T03:41:57.098Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-01-31T03:41:57.098Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-01-31T03:41:57.098Z] Accepted request POST /hwoverflow-app/us-central1/api/questions/post --> api
+[debug] [2020-01-31T03:41:57.098Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-01-31T03:41:57.098Z] [worker-pool] Cleaned up workers for api: 1 --> 0
+[debug] [2020-01-31T03:41:57.102Z] [worker-pool] addWorker(api)
+[debug] [2020-01-31T03:41:57.102Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-01-31T03:41:57.102Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-01-31T03:41:57.102Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: Assigning socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:41:57.102Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: BUSY
+[debug] [2020-01-31T03:41:57.260Z] [runtime-status] [87391] Functions runtime initialized. {"cwd":"/Users/tashyue/Desktop/hwoverflow/functions","node_version":"12.10.0"}
+[debug] [2020-01-31T03:41:57.261Z] [runtime-status] [87391] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-01-31T03:41:57.262Z] [runtime-status] [87391] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-01-31T03:41:57.262Z] [runtime-status] [87391] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-01-31T03:41:57.263Z] [runtime-status] [87391] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-01-31T03:41:57.546Z] [runtime-status] [87391] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-01-31T03:41:57.547Z] [runtime-status] [87391] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-01-31T03:41:57.547Z] [runtime-status] [87391] Running api in mode HTTPS
+[debug] [2020-01-31T03:41:57.549Z] [runtime-status] [87391] Attempting to listen to socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:41:57.551Z] [functions] Runtime ready! Sending request!
+[debug] [2020-01-31T03:41:57.558Z] [runtime-status] [87391] Ephemeral server handling POST request
+[debug] [2020-01-31T03:41:57.562Z] [runtime-status] [87391] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-01-31T03:41:57.563Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: IDLE
+[debug] [2020-01-31T03:41:57.563Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-01-31T03:44:05.219Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-01-31T03:44:05.219Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-01-31T03:44:05.219Z] Accepted request POST /hwoverflow-app/us-central1/api/questions/ask --> api
+[debug] [2020-01-31T03:44:05.219Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-01-31T03:44:05.219Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: Assigning socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:44:05.219Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: BUSY
+[debug] [2020-01-31T03:44:05.220Z] [runtime-status] [87391] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-01-31T03:44:05.220Z] [runtime-status] [87391] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-01-31T03:44:05.220Z] [runtime-status] [87391] Running api in mode HTTPS
+[debug] [2020-01-31T03:44:05.220Z] [runtime-status] [87391] Attempting to listen to socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:44:05.223Z] [functions] Runtime ready! Sending request!
+[debug] [2020-01-31T03:44:05.225Z] [runtime-status] [87391] Ephemeral server handling POST request
+[debug] [2020-01-31T03:44:05.225Z] [runtime-status] [87391] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-01-31T03:44:05.226Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: IDLE
+[debug] [2020-01-31T03:44:05.226Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-01-31T03:44:26.537Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-01-31T03:44:26.537Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-01-31T03:44:26.537Z] Accepted request POST /hwoverflow-app/us-central1/api/questions/ask --> api
+[debug] [2020-01-31T03:44:26.537Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-01-31T03:44:26.537Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: Assigning socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:44:26.537Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: BUSY
+[debug] [2020-01-31T03:44:26.537Z] [runtime-status] [87391] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-01-31T03:44:26.538Z] [runtime-status] [87391] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-01-31T03:44:26.538Z] [runtime-status] [87391] Running api in mode HTTPS
+[debug] [2020-01-31T03:44:26.538Z] [runtime-status] [87391] Attempting to listen to socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:44:26.538Z] [functions] Runtime ready! Sending request!
+[debug] [2020-01-31T03:44:26.550Z] [runtime-status] [87391] Ephemeral server handling POST request
+[debug] [2020-01-31T03:44:26.550Z] [runtime-status] [87391] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-01-31T03:44:26.551Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: IDLE
+[debug] [2020-01-31T03:44:26.551Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-01-31T03:44:54.750Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-01-31T03:44:54.751Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-01-31T03:44:54.751Z] Accepted request GET /hwoverflow-app/us-central1/api/user --> api
+[debug] [2020-01-31T03:44:54.751Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-01-31T03:44:54.751Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: Assigning socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:44:54.751Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: BUSY
+[debug] [2020-01-31T03:44:54.751Z] [runtime-status] [87391] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-01-31T03:44:54.751Z] [runtime-status] [87391] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-01-31T03:44:54.751Z] [runtime-status] [87391] Running api in mode HTTPS
+[debug] [2020-01-31T03:44:54.751Z] [runtime-status] [87391] Attempting to listen to socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:44:54.752Z] [functions] Runtime ready! Sending request!
+[debug] [2020-01-31T03:44:54.753Z] [runtime-status] [87391] Ephemeral server handling GET request
+[debug] [2020-01-31T03:44:54.801Z] [runtime-status] [87391] Ephemeral server survived.
+[info] >  Error while verifying token  FirebaseAuthError: Firebase ID token has expired. Get a fresh ID token from your client app and try again (auth/id-token-expired). See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.
+[info] >      at FirebaseAuthError.FirebaseError [as constructor] (/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+[info] >      at FirebaseAuthError.PrefixedFirebaseError [as constructor] (/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+[info] >      at new FirebaseAuthError (/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-admin/lib/utils/error.js:147:16)
+[info] >      at /Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:199:39
+[info] >      at Object.module.exports [as verify] (/Users/tashyue/Desktop/hwoverflow/functions/node_modules/jsonwebtoken/verify.js:126:14)
+[info] >      at /Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:191:17
+[info] >      at new Promise (<anonymous>)
+[info] >      at FirebaseTokenVerifier.verifyJwtSignatureWithKey (/Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:190:16)
+[info] >      at /Users/tashyue/Desktop/hwoverflow/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:175:30
+[info] >      at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+[info] >    errorInfo: {
+[info] >      code: 'auth/id-token-expired',
+[info] >      message: 'Firebase ID token has expired. Get a fresh ID token from your client app and try again (auth/id-token-expired). See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.'
+[info] >    },
+[info] >    codePrefix: 'auth'
+[info] >  }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-01-31T03:44:54.870Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: IDLE
+[debug] [2020-01-31T03:44:54.871Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-01-31T03:45:01.620Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-01-31T03:45:01.620Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-01-31T03:45:01.620Z] Accepted request POST /hwoverflow-app/us-central1/api/login --> api
+[debug] [2020-01-31T03:45:01.620Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-01-31T03:45:01.620Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: Assigning socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:45:01.620Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: BUSY
+[debug] [2020-01-31T03:45:01.620Z] [runtime-status] [87391] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-01-31T03:45:01.621Z] [runtime-status] [87391] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-01-31T03:45:01.621Z] [runtime-status] [87391] Running api in mode HTTPS
+[debug] [2020-01-31T03:45:01.621Z] [runtime-status] [87391] Attempting to listen to socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:45:01.621Z] [functions] Runtime ready! Sending request!
+[debug] [2020-01-31T03:45:01.624Z] [runtime-status] [87391] Ephemeral server handling POST request
+[debug] [2020-01-31T03:45:01.634Z] [runtime-status] [87391] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-01-31T03:45:02.096Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: IDLE
+[debug] [2020-01-31T03:45:02.096Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-01-31T03:45:41.648Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-01-31T03:45:41.648Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-01-31T03:45:41.648Z] Accepted request GET /hwoverflow-app/us-central1/api/user --> api
+[debug] [2020-01-31T03:45:41.648Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-01-31T03:45:41.648Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: Assigning socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:45:41.648Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: BUSY
+[debug] [2020-01-31T03:45:41.648Z] [runtime-status] [87391] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-01-31T03:45:41.649Z] [runtime-status] [87391] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-01-31T03:45:41.649Z] [runtime-status] [87391] Running api in mode HTTPS
+[debug] [2020-01-31T03:45:41.649Z] [runtime-status] [87391] Attempting to listen to socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:45:41.649Z] [functions] Runtime ready! Sending request!
+[debug] [2020-01-31T03:45:41.651Z] [runtime-status] [87391] Ephemeral server handling GET request
+[debug] [2020-01-31T03:45:41.651Z] [runtime-status] [87391] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-01-31T03:45:42.238Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: IDLE
+[debug] [2020-01-31T03:45:42.238Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-01-31T03:46:22.735Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-01-31T03:46:22.735Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-01-31T03:46:22.735Z] Accepted request POST /hwoverflow-app/us-central1/api/questions/ask --> api
+[debug] [2020-01-31T03:46:22.735Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-01-31T03:46:22.735Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: Assigning socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:46:22.735Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: BUSY
+[debug] [2020-01-31T03:46:22.735Z] [runtime-status] [87391] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-01-31T03:46:22.736Z] [runtime-status] [87391] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-01-31T03:46:22.736Z] [runtime-status] [87391] Running api in mode HTTPS
+[debug] [2020-01-31T03:46:22.736Z] [runtime-status] [87391] Attempting to listen to socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:46:22.736Z] [functions] Runtime ready! Sending request!
+[debug] [2020-01-31T03:46:22.738Z] [runtime-status] [87391] Ephemeral server handling POST request
+[debug] [2020-01-31T03:46:22.739Z] [runtime-status] [87391] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-01-31T03:46:22.739Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: IDLE
+[debug] [2020-01-31T03:46:22.739Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-01-31T03:48:31.058Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-01-31T03:48:31.058Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-01-31T03:48:31.058Z] Accepted request POST /hwoverflow-app/us-central1/api/questions/ask --> api
+[debug] [2020-01-31T03:48:31.059Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-01-31T03:48:31.059Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: Assigning socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:48:31.059Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: BUSY
+[debug] [2020-01-31T03:48:31.059Z] [runtime-status] [87391] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-01-31T03:48:31.061Z] [runtime-status] [87391] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-01-31T03:48:31.061Z] [runtime-status] [87391] Running api in mode HTTPS
+[debug] [2020-01-31T03:48:31.061Z] [runtime-status] [87391] Attempting to listen to socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:48:31.062Z] [functions] Runtime ready! Sending request!
+[debug] [2020-01-31T03:48:31.064Z] [runtime-status] [87391] Ephemeral server handling POST request
+[debug] [2020-01-31T03:48:31.065Z] [runtime-status] [87391] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-01-31T03:48:31.065Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: IDLE
+[debug] [2020-01-31T03:48:31.065Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-01-31T03:49:07.792Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-01-31T03:49:07.792Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-01-31T03:49:07.792Z] Accepted request POST /hwoverflow-app/us-central1/api/questions/ask --> api
+[debug] [2020-01-31T03:49:07.792Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-01-31T03:49:07.792Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: Assigning socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:49:07.792Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: BUSY
+[debug] [2020-01-31T03:49:07.793Z] [runtime-status] [87391] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-01-31T03:49:07.793Z] [runtime-status] [87391] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-01-31T03:49:07.793Z] [runtime-status] [87391] Running api in mode HTTPS
+[debug] [2020-01-31T03:49:07.793Z] [runtime-status] [87391] Attempting to listen to socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:49:07.794Z] [functions] Runtime ready! Sending request!
+[debug] [2020-01-31T03:49:07.796Z] [runtime-status] [87391] Ephemeral server handling POST request
+[debug] [2020-01-31T03:49:07.796Z] [runtime-status] [87391] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-01-31T03:49:07.797Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: IDLE
+[debug] [2020-01-31T03:49:07.797Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-01-31T03:49:09.238Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-01-31T03:49:09.238Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-01-31T03:49:09.238Z] Accepted request POST /hwoverflow-app/us-central1/api/questions/ask --> api
+[debug] [2020-01-31T03:49:09.238Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-01-31T03:49:09.239Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: Assigning socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:49:09.239Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: BUSY
+[debug] [2020-01-31T03:49:09.239Z] [runtime-status] [87391] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-01-31T03:49:09.239Z] [runtime-status] [87391] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-01-31T03:49:09.239Z] [runtime-status] [87391] Running api in mode HTTPS
+[debug] [2020-01-31T03:49:09.239Z] [runtime-status] [87391] Attempting to listen to socketPath: /var/folders/gs/q6pvt9_54_z4k6t5xtm19fpw0000gn/T/fire_emu_87391.sock
+[debug] [2020-01-31T03:49:09.240Z] [functions] Runtime ready! Sending request!
+[debug] [2020-01-31T03:49:09.241Z] [runtime-status] [87391] Ephemeral server handling POST request
+[debug] [2020-01-31T03:49:09.242Z] [runtime-status] [87391] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-01-31T03:49:09.242Z] [worker-api-a0cdf825-761a-47c2-9869-c2da6d739c1e]: IDLE
+[debug] [2020-01-31T03:49:09.242Z] [work-queue] {"queueLength":0,"workRunningCount":0}
