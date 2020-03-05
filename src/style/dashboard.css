@@ -1,0 +1,23 @@
+.row-container {
+    margin: 50px 15% 0px 15%;
+    display: block;
+}
+
+.row-container h1 {
+    /* background-color: lightblue; */
+    display: inline;
+}
+
+.video-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    /* background-color: green; */
+    height: 200px;
+    overflow: hidden;
+}
+
+.video-container span {
+    padding: 20px 20px;
+}

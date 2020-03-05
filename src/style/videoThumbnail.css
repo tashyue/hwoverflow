@@ -1,0 +1,66 @@
+.thumbnail {
+    width: 192px;
+    color: rgb(130, 130, 130);
+    display: block;
+    margin: 0px;
+}
+
+.video-thumbnail {
+    margin: 100px auto 0px;
+    background-color: red;
+    height: 108px;
+    width: 192px;
+    border: 1px solid black;
+}
+
+.video-thumbnail:hover {
+    cursor: pointer;
+}
+
+.video-info-container {
+    margin-top: 0px;
+    margin: 0px 0px;
+    max-width: 194px;
+}
+
+.video-info {
+    display: inline-block;
+}
+
+.video-title {
+    display: block;
+    float: left;
+    margin: 0px 1px;
+    width: 192px;
+    font-weight: bold;
+}
+
+.profile-photo {
+    margin: 0px auto;
+    background-color: blue;
+    height: 30px;
+    width: 30px;
+    border-radius: 25px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.name-container {
+    display: inline-block;
+    margin: 0px 4px;
+    max-width: 185px;
+    position: relative;
+    top: -5px;
+}
+
+.username {
+    font-size: .75em;
+    display: block;
+    margin: 0px;
+}
+
+.class-name {
+    font-size: .5em;
+    display: block;
+    margin: 0px;
+}

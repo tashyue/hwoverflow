@@ -1,0 +1,84 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-bar {
+    background-color:  #707070;
+    overflow: hidden;
+    color: white;
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+}
+
+.nav-bar a {
+    float: left;
+    text-align: center;
+    padding: 8px 4px;
+    color: white;
+    font-size: 1em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.nav-bar a:hover {
+    color: black;
+}
+
+.logo {
+    margin-left: 12px;
+}
+
+.nav-bar .search-container {
+    float: right;
+    margin-right: 12px;
+    position: relative;
+    
+    /* width: 45%; */
+}
+
+.search-container input[type=text] {
+    padding: 8px 16px;
+    border-radius: 25px;
+    margin-top: 10px;
+    border: none;
+}
+
+.search-container button {
+    float: right;
+    margin-top: 12px;
+    background-color: #707070;
+    border: none;
+    color: white;
+    font-size: 1em;
+}
+
+.search-container button:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #707070;
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+.footer h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.footer h3 {
+    font-size: .75em;
+    font-weight: lighter;
+    padding-bottom: 16px;
+}
