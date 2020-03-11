@@ -7,7 +7,7 @@ import { DropzoneArea } from 'material-ui-dropzone';
 
 
 const useStyles = makeStyles(theme => ({
-    root: {
+    content: {
         textAlign: 'center',
     },    
     formControl: {
@@ -36,12 +36,14 @@ const Upload = () => {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
+        <div>
             <NavBar />
+            <div className={classes.content}>
             <h1>Upload a Problem</h1>
             <FormControl className={classes.formControl}>
                 <InputLabel>Subject</InputLabel>
                 <Select>
+                    {/* Eventually will need to add all options for every class */}
                     <option value="" />
                     <option value="CMPE">CMPE</option>
                 </Select>
@@ -49,6 +51,7 @@ const Upload = () => {
             <FormControl className={classes.formControl}>
                 <InputLabel>Class Name</InputLabel>
                 <Select>
+                    
                     <option value="" />
                     <option value="CMPE">CMPE</option>
                 </Select>
@@ -58,6 +61,9 @@ const Upload = () => {
                     label="Enter problem title" 
                 />
             </FormControl>
+            {/* Handles video upload, 
+                documentation: https://www.npmjs.com/package/material-ui-dropzone
+                As of now, you can upload images and video files only*/}
             <DropzoneArea 
                 filesLimit={3}
                 acceptedFiles={['image/*', 'video/*']}
@@ -75,12 +81,14 @@ const Upload = () => {
                 className={classes.description}
                 showFileNames={true}
             />
+            {/* Still need to handle button on click to connect to the backend */}
             <Button
                 className={classes.button}
                 startIcon={<CloudUploadIcon />}
             >
                 Upload
             </Button>
+            </div>
         </div>
     );  
 }
