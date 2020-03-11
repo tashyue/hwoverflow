@@ -6,35 +6,20 @@ import SignUp from './components/signUp';
 import './style/navBar.css';
 import VideoThumbnail from './components/videoThumbnail';
 import Dashboard from './components/dashboard';
+import NavBar from './components/NavBar';
 
 class App extends Component {
     render() {
         return (
             <Router>
-                <div className="nav-bar">
-                    <Link to="/">
-                        <a className="logo">HWOverflow</a>
-                    </Link>
-                    <div className="search-container">
-                        <form className="search">
-                            <input
-                                type="text"
-                                placeholder="Search..."
-                            />
-                            <button type="submit"><i class="material-icons">search</i></button>
-                        </form>
-                    </div>
-                    <Link to="/LogIn">
-                            <a className="login">Log In</a>
-                    </Link>
-                </div>
+                <NavBar />
                 <div className="footer">
                     <h2>About Us</h2>
                     <h3>
                         Quick description of our product for 
                         people to see on the home page of the website
                     </h3>
-                </div>
+                </div> 
                 {/* <hr /> */}
                 <Switch>
                     <Route exact path='/' component={Home} />
