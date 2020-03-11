@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import VideoThumbnail from "./videoThumbnail";
-import '../style/profile.css';
 
-class Profile extends Component {
+class Edit_Profile extends Component {
     render(){
         return (
             <div>
@@ -14,26 +12,17 @@ class Profile extends Component {
                     <div className="picture-container">
 
                     </div>
-                    <div classname="logout">
-                        <Link to="/Login">
-                        <button className="large-button">Log Out!</button>
+                    <div classname="cancel">
+                        <Link to="/Profile">
+                        <button className="large-button">Cancel</button>
                         </Link>
                     </div>
-                    <div classname="edit_profile">
-                        <Link to="/Edit_Profile">
-                        <button className="large-button">Edit Profile</button>
+                    <div classname="save_changes">
+                        <Link to="/Profile">
+                        <button className="large-button">Save Changes</button>
                         </Link>
                     </div>
 
-                </div>
-                <div className="row-container">
-                    <h1>My Posts</h1>
-                    {/* <hr></hr> */}
-                    <div className="video-container">
-                        <span><VideoThumbnail /></span>
-                        <span><VideoThumbnail /></span>
-                        <span><VideoThumbnail /></span>
-                    </div>
                 </div>
                 <div className="info-container">
                     <h1>Personal Info</h1>
@@ -50,4 +39,4 @@ class Profile extends Component {
     }
 }
 
-export default Profile;
+export default Edit_Profile;

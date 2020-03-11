@@ -7,6 +7,7 @@ import './style/navBar.css';
 import VideoThumbnail from './components/videoThumbnail';
 import Dashboard from './components/dashboard';
 import Profile from './components/profile';
+import Edit_Profile from './components/edit_profile';
 
 class App extends Component {
     render() {
@@ -43,6 +44,7 @@ class App extends Component {
                     <Route path='/SignUp' component={SignUp} />
                     <Route path='/Dashboard' component = {Dashboard} />
                     <Route path='/Profile' component = {Profile} />
+                    <Route path='/Edit_Profile' component = {Edit_Profile} />
                 </Switch>
             </Router>
         )
