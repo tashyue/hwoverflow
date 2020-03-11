@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './pages/Home'
 import Login from './pages/Login';
-import SignUp from './components/signUp';
+import SignUp from './pages/SignUp';
 import VideoThumbnail from './components/videoThumbnail';
 import Dashboard from './components/dashboard';
 import Upload from './pages/Upload';
