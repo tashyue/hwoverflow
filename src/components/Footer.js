@@ -1,27 +1,42 @@
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import { textAlign } from '@material-ui/system';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { Typography, Container } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
-    root: {
-        position: 'fixed',
+    footer: {
+        padding: theme.spacing(3, 2),
+        backgroundColor: theme.palette.primary.main,
+        textAlign: 'center',
+        position: 'absolute',
         left: 0,
         bottom: 0,
-        textAlign: 'center',
-        width: '100%',
+        right: 0,
     }
 }));
 
 const Footer = () => {
     const classes = useStyles();
     return (
-        <div className={classes.root}>
-            <h2>About Us</h2>
-            <h3>
-                Quick description of our product for 
-                people to see on the home page of the website
-            </h3>
-        </div>
+        <footer className={classes.footer}>
+            <Container maxWidth="sm">
+                <Typography 
+                    variant="subtitle2"
+                    color="textSecondary"
+                >
+                    About Us
+                </Typography>
+                <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    // paragraph
+                    >
+                    HW Overflow aims to bring an advanced and progressive educational
+                    learning platform to students everywhere. It allows students to 
+                    communicate and collaborate over a wide range of topics from the 
+                    comfort of their own home.
+                </Typography>
+            </Container>
+        </footer>
     );
 }
 
