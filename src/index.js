@@ -17,7 +17,7 @@ const theme = createMuiTheme({
       dark: '#6e78a6'
     },
     text: {
-      primary: '#269238', // dark  blue grey
+      primary: '#263238', // dark  blue grey
       secondary: '#eceff1' // almost white
     },
     type: 'light' // select light or dark theme
