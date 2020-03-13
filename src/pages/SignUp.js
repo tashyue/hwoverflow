@@ -4,7 +4,6 @@ import { CssBaseline, Container, Avatar, Typography, TextField, FormControlLabel
 import NavBar from '../components/NavBar'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 import Grid from '@material-ui/core/Grid'
-import { grid } from '@material-ui/system'
 
 const useStyles = makeStyles(theme => ({
     root: {

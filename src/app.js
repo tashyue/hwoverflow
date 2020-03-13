@@ -6,6 +6,7 @@ import SignUp from './pages/SignUp';
 import VideoThumbnail from './components/videoThumbnail';
 import Dashboard from './components/dashboard';
 import Upload from './pages/Upload';
+import './style/normalize.css'
 
 class App extends Component {
     render() {

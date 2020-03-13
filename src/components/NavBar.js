@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, InputBase, makeStyles, fade, Button, IconButton } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu'
-import SearchIcon from '@material-ui/icons/Search'
+import SearchIcon from '@material-ui/icons/Search';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -52,6 +52,10 @@ const useStyles = makeStyles(theme => ({
         },
     },
   }));
+
+  function handleClick(event) {
+      console.info('clicked');
+  }
   
   const NavBar = () => {
     const classes = useStyles();
@@ -60,11 +64,9 @@ const useStyles = makeStyles(theme => ({
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            </IconButton>
             <Typography variant="h6" className={classes.title}>
-              HW Overflow
-            </Typography>
+                HW Overflow
+            </Typography>            
             <div className={classes.search}>
                 <div className={classes.searchIcon}>
                     <SearchIcon />

@@ -5,9 +5,6 @@ import Footer from '../components/Footer'
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
-    root: {
-        
-    },
     content: {
         textAlign: 'center',
         marginTop: theme.spacing(8)
@@ -20,12 +17,12 @@ const useStyles = makeStyles(theme => ({
 const Home = () => {
     const classes = useStyles();
     return (
-        <div className={classes.root}>
+        <div>
             <NavBar />
             <div className={classes.content}>
                 <Typography variant="h1">HW Overflow</Typography>
                 <Button
-                    color='primary'
+                    color='primary' 
                     variant='contained'
                     className={classes.button}
                     size="large"
