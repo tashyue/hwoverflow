@@ -3,6 +3,7 @@ import { Button, Typography, Container } from '@material-ui/core'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import { makeStyles } from '@material-ui/core/styles'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -19,8 +20,10 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
+
 const Home = () => {
     const classes = useStyles();
+
     return (
         <div className={classes.root}>
             <NavBar />
@@ -31,6 +34,7 @@ const Home = () => {
                     variant='contained'
                     className={classes.button}
                     size="large"
+                    href="/SignUp"
                 >
                     Sign Up
                 </Button>
