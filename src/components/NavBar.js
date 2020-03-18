@@ -52,10 +52,6 @@ const useStyles = makeStyles(theme => ({
         },
     },
   }));
-
-  function handleClick(event) {
-      console.info('clicked');
-  }
   
   const NavBar = () => {
     const classes = useStyles();
@@ -65,8 +61,8 @@ const useStyles = makeStyles(theme => ({
         <AppBar position="static">
           <Toolbar>
             <Typography variant="h6" className={classes.title}>
-                HW Overflow
-            </Typography>            
+              HW Overflow
+            </Typography>          
             <div className={classes.search}>
                 <div className={classes.searchIcon}>
                     <SearchIcon />
@@ -80,7 +76,13 @@ const useStyles = makeStyles(theme => ({
                     inputProps={{ 'aria-label': 'search'}}
                 />
             </div>
-            <Button color="inherit">Login</Button>
+            <Button 
+              color="inherit"
+              variant="text"
+              href="/Login"
+            >
+              Login
+            </Button>
           </Toolbar>
         </AppBar>
       </div>
