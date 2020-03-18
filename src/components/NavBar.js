@@ -1,7 +1,7 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, InputBase, makeStyles, fade, Button, IconButton } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, InputBase, makeStyles, fade, Button, IconButton, Menu, MenuItem } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
-import Link from '@material-ui/core/Link';
+import AccountCircle from '@material-ui/icons/AccountCircle';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -54,8 +54,26 @@ const useStyles = makeStyles(theme => ({
   }));
   
   const NavBar = () => {
-    const classes = useStyles();
-  
+    const classes = useStyles(); // Styling
+    const [ auth, setAuth ] = React.useState(true); // For authenicated user
+    const [ anchorEl, setAnchorEl ] = React.useState(null); // For positioning menu
+    const open = Boolean(anchorEl);
+
+    // Handle Functions
+    const handleMenu = event => {
+      setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+
+    const handleLogout = event => {
+      setAnchorEl(null);
+      setAuth(false);
+    };
+
+
     return (
       <div className={classes.root}>
         <AppBar position="static">
@@ -76,13 +94,50 @@ const useStyles = makeStyles(theme => ({
                     inputProps={{ 'aria-label': 'search'}}
                 />
             </div>
-            <Button 
+            {/* Authenticated user */}
+            {auth && (
+              <div>
+                <IconButton
+                color="inherit"
+                aria-haspopup="true"
+                aria-controls="menu-appbar"
+                aria-label="account of current user"
+                onClick={handleMenu}
+                >
+                  <AccountCircle />
+                </IconButton>
+                <Menu
+                  id="menu-appbar"
+                  anchorEl={anchorEl}
+                  anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  keepMounted
+                  transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  open={open}
+                  onClose={handleClose}
+                >
+                  {/* Set onClick to navigate to respective pages */}
+                  <MenuItem>Profile</MenuItem> 
+                  <MenuItem>Account Settings</MenuItem>
+                  <MenuItem onClick={handleLogout}>Logout</MenuItem>
+                </Menu>
+              </div>
+            )}
+            {/* Non-authenticated user */}
+            {!auth && (
+              <Button 
               color="inherit"
               variant="text"
               href="/Login"
             >
               Login
             </Button>
+            )}
           </Toolbar>
         </AppBar>
       </div>
