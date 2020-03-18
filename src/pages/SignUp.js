@@ -1,6 +1,10 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { CssBaseline, Container, Avatar, Typography, TextField, FormControlLabel, Checkbox, Button } from '@material-ui/core'
+import { 
+    CssBaseline, Container, 
+    Avatar, Typography, 
+    TextField, FormControlLabel, 
+    Checkbox, Button, Link } from '@material-ui/core'
 import NavBar from '../components/NavBar'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 import Grid from '@material-ui/core/Grid'
@@ -116,9 +120,9 @@ const SignUp = () => {
                         </Button>
                         <Grid container justify="flex-end">
                             <Grid item>
-                                <Typography variant="body2">
-                                    Already have an account? Sign In
-                                </Typography>
+                                <Link href="/Login" variant="body2">
+                                    {"Already have an account? Login"}
+                                </Link>
                             </Grid>
                         </Grid>
                     </form>

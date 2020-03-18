@@ -72,7 +72,6 @@ const Login = () => {
                             }}
                             required
                             fullWidth
-                            autoFocus
                         />
                         <FormControlLabel
                             control={<Checkbox value="remember" color="primary"/>}
