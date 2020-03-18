@@ -20,6 +20,9 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
         marginTop: theme.spacing(1),
     },
+    inputLabel: {
+        color: theme.palette.text.primary,
+    },
     submit: {
         margin: theme.spacing(3, 0, 2),
     },
@@ -49,6 +52,9 @@ const SignUp = () => {
                                     id="firstName"
                                     label="First Name"
                                     variant="outlined"
+                                    InputLabelProps={{
+                                        className: classes.inputLabel
+                                    }}
                                     required
                                     fullWidth
                                     autoFocus
@@ -61,6 +67,9 @@ const SignUp = () => {
                                     id="lastName"
                                     label="Last Name"
                                     variant="outlined"
+                                    InputLabelProps={{
+                                        className: classes.inputLabel
+                                    }}
                                     required
                                     fullWidth
                                 />
@@ -72,6 +81,9 @@ const SignUp = () => {
                                     name="email"
                                     autoComplete="email"
                                     variant="outlined"
+                                    InputLabelProps={{
+                                        className: classes.inputLabel
+                                    }}
                                     required
                                     fullWidth
                                 />
@@ -84,6 +96,9 @@ const SignUp = () => {
                                     type="password"
                                     autoComplete="password"
                                     variant="outlined"
+                                    InputLabelProps={{
+                                        className: classes.inputLabel
+                                    }}
                                     required
                                     fullWidth
                                     autoComplete="current-password"

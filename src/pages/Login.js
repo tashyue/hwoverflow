@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { CssBaseline, Container, Avatar, Typography, TextField, FormControlLabel, Checkbox, Button } from '@material-ui/core'
+import { CssBaseline, Container, Avatar, Typography, TextField, FormControlLabel, Checkbox, Button, Link } from '@material-ui/core'
 import NavBar from '../components/NavBar'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 import Grid from '@material-ui/core/Grid'
@@ -19,6 +19,10 @@ const useStyles = makeStyles(theme => ({
     form: {
         width: '100%',
         marginTop: theme.spacing(1),
+        
+    },
+    inputLabel: {
+        color: theme.palette.text.primary,
     },
     submit: {
         margin: theme.spacing(3, 0, 2),
@@ -48,6 +52,9 @@ const Login = () => {
                             autoComplete="email"
                             variant="outlined"
                             margin="normal"
+                            InputLabelProps={{
+                                className: classes.inputLabel
+                            }}
                             required
                             fullWidth
                             autoFocus
@@ -60,6 +67,9 @@ const Login = () => {
                             autoComplete="password"
                             variant="outlined"
                             margin="normal"
+                            InputLabelProps={{
+                                className: classes.inputLabel
+                            }}
                             required
                             fullWidth
                             autoFocus
@@ -84,9 +94,9 @@ const Login = () => {
                                 </Typography>
                             </Grid>
                             <Grid item>
-                                <Typography variant="body2">
-                                    Don't have an accout? Sign Up
-                                </Typography>
+                                <Link href="/SignUp" variant="body2">
+                                    {"Don't have an accout? Sign Up"}
+                                </Link>
                             </Grid>
                         </Grid>
                     </form>
