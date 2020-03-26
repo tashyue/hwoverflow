@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { AppBar, Toolbar, Typography, 
   InputBase, withStyles, fade, Button, 
-  IconButton, Menu, MenuItem } from '@material-ui/core';
+  IconButton, Menu, MenuItem, Link } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 
@@ -61,6 +61,7 @@ const useStyles = theme => ({
       auth: true,
       anchorEl: null,
     }
+    
     // Handle Functions
     handleMenu = event => {
       this.setState({
@@ -86,15 +87,18 @@ const useStyles = theme => ({
       const { auth,  anchorEl } = this.state;
       const open = Boolean(anchorEl);
 
-      
-
       return (
         <div className={classes.root}>
           <AppBar position="static">
             <Toolbar>
-              <Typography variant="h6" className={classes.title}>
-                HW Overflow
-              </Typography>          
+              <Link 
+                variant="h6" 
+                color="textSecondary" 
+                className={classes.title}
+                underline="none"
+                href="/">
+                {"HW Overflow"}
+              </Link>          
               <div className={classes.search}>
                   <div className={classes.searchIcon}>
                       <SearchIcon />
