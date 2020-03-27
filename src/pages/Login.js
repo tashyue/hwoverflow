@@ -1,11 +1,11 @@
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
+import React, { Component } from 'react'
+import { withStyles } from '@material-ui/core/styles'
 import { CssBaseline, Container, Avatar, Typography, TextField, FormControlLabel, Checkbox, Button, Link } from '@material-ui/core'
 import NavBar from '../components/NavBar'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 import Grid from '@material-ui/core/Grid'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = theme => ({
     root: {
         marginTop: theme.spacing(8),
         display: 'flex',
@@ -27,13 +27,14 @@ const useStyles = makeStyles(theme => ({
     submit: {
         margin: theme.spacing(3, 0, 2),
     },
-}));
+});
 
-const Login = () => {
-    const classes = useStyles();
-
-    return (
-        <div>
+export class Login extends Component {
+    render() {
+        const { classes } = this.props;
+        return (
+            <div>
+                <div>
             <NavBar />
             <Container maxWidth="xs">
                 <CssBaseline />
@@ -72,7 +73,6 @@ const Login = () => {
                             }}
                             required
                             fullWidth
-                            autoFocus
                         />
                         <FormControlLabel
                             control={<Checkbox value="remember" color="primary"/>}
@@ -103,8 +103,9 @@ const Login = () => {
                 </div>
             </Container>
         </div>
-        
-    );
+            </div>
+        )
+    };
 }
 
-export default Login;
+export default withStyles(useStyles)(Login)
