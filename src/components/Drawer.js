@@ -26,10 +26,13 @@ const useStyles = theme => ({
   });
 
 class Drawer extends Component {
+  state = {
+    menu: SubjectMenu
+  }
 
     render() {
         const { classes, toggleDrawer, open } = this.props
-
+        const { menu } = this.state
         return (
             <MUIDrawer
                 open={open}
@@ -40,19 +43,20 @@ class Drawer extends Component {
                 paper: classes.drawerPaper
                 }}
              >
+              <List>
             <div className={classes.drawerHeader}>
-              <Typography>
-                  Subjects
-              </Typography>
+              <ListItem >
+                  <ListItemText primary="Subjects" />
+              </ListItem>
               <IconButton onClick={toggleDrawer}>
                 <ChevronLeftIcon />
               </IconButton>
             </div>
             <Divider />
-            <List>
-              {['Computer Engineering', 'Physics', 'Mathematics'].map((text) => (
-                <ListItem button key={text}>
-                  <ListItemText primary={text} />
+            
+              {menu.map((menuItem) => (
+                <ListItem button key={menuItem.text}>
+                  <ListItemText primary={menuItem.text} />
                 </ListItem>
               ))}
             </List>

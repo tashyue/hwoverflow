@@ -113,6 +113,7 @@ class SignUp extends Component {
                                 className={classes.submit}
                                 fullWidth
                                 variant="contained"
+                                href="/Dashboard"
                             >
                                 Sign Up
                             </Button>

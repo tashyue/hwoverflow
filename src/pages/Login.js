@@ -82,6 +82,7 @@ export class Login extends Component {
                                 className={classes.submit}
                                 fullWidth
                                 variant="contained"
+                                href="/Dashboard"
                             >
                                 Login
                             </Button>
