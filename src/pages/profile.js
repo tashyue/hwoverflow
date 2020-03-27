@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import VideoThumbnail from "../components/videoThumbnail";
-import '../style/profile.css';
+// import '../style/profile.css';
 import { Button, Typography } from '@material-ui/core'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
