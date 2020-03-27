@@ -53,7 +53,6 @@ class Drawer extends Component {
               </IconButton>
             </div>
             <Divider />
-            
               {menu.map((menuItem) => (
                 <ListItem button key={menuItem.text}>
                   <ListItemText primary={menuItem.text} />
