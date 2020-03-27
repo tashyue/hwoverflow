@@ -24,7 +24,7 @@ const useStyles = theme => ({
       justifyContent: 'flex-end',
     },
   });
-
+  
 class Drawer extends Component {
   state = {
     menu: SubjectMenu

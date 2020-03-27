@@ -123,7 +123,7 @@ class NavBar extends Component {
                   onClose={this.handleMenuClose}
                 >
                   {/* Set onClick to navigate to respective pages */}
-                  <MenuItem>Profile</MenuItem> 
+                  <MenuItem href="/Profile">Profile</MenuItem> 
                   <MenuItem>Account Settings</MenuItem>
                   <MenuItem onClick={this.handleLogout}>Logout</MenuItem>
                 </Menu>

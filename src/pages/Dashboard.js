@@ -54,13 +54,13 @@ class Dashboard extends Component {
                                             <CardContent className={classes.cardContent}>
                                                 <Typography gutterBottom variant="h6" component="h2">
                                                     Video Description
+                                                    <Link variant="body1" component="h6">
+                                                        {"Class name"}
+                                                    </Link>
+                                                    <Link variant="body2" component="h6" href="/Profile">
+                                                        {"Username"}
+                                                    </Link>
                                                 </Typography>
-                                                <Link variant="body1" component="h6">
-                                                    {"Class name"}
-                                                </Link>
-                                                <Link variant="body2" component="h6">
-                                                    {"Username"}
-                                                </Link>
                                             </CardContent>
                                             {/* TODO: Add card actions */}
                                         </Card>
