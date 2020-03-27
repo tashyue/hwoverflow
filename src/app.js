@@ -8,7 +8,7 @@ import Dashboard from './components/dashboard';
 import Upload from './pages/Upload';
 import Profile from './pages/profile';
 import Edit_Profile from './pages/edit_profile';
-
+import './style/normalize.css'
 class App extends Component {
     render() {
         return (

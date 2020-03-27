@@ -1,38 +1,44 @@
 import React from 'react'
-import { Button, Typography } from '@material-ui/core'
+import { Button, Typography, Container } from '@material-ui/core'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import { makeStyles } from '@material-ui/core/styles'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
     root: {
-        
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '10vh'
     },
     content: {
         textAlign: 'center',
-        marginTop: theme.spacing(8)
+        marginTop: '15%',
     },
     button: {
         marginTop: theme.spacing(3), 
     }
 }));
 
+
 const Home = () => {
     const classes = useStyles();
+
     return (
         <div className={classes.root}>
             <NavBar />
-            <div className={classes.content}>
+            <Container component="main" className={classes.content} maxWidth="sm">
                 <Typography variant="h1">HW Overflow</Typography>
                 <Button
-                    color='primary'
+                    color='primary' 
                     variant='contained'
                     className={classes.button}
                     size="large"
+                    href="/SignUp"
                 >
                     Sign Up
                 </Button>
-            </div>
+            </Container>
             <Footer />
         </div>
     );
