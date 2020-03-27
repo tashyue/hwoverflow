@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import NavBar from '../components/NavBar';
 import { FormControl, InputLabel, Select, TextField, Button, Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import { DropzoneArea } from 'material-ui-dropzone';
+import Layout from '../components/Layout';
 
 
 const useStyles = theme => ({
     content: {
         textAlign: 'center',
-        margin: theme.spacing(1)
+        margin: theme.spacing(1),
     },    
     formControl: {
         margin: theme.spacing(1),
@@ -35,10 +35,9 @@ const useStyles = theme => ({
 
 class Upload extends Component {
     render() {
-        const classes = useStyles();
+        const { classes } = this.props;
         return (
-            <div>
-                <NavBar />
+            <Layout>
                 <div className={classes.content}>
                     <Typography variant="h3">Upload a Problem</Typography>
                     <FormControl className={classes.formControl}>
@@ -92,7 +91,7 @@ class Upload extends Component {
                         Upload
                     </Button>
                 </div>
-            </div>
+            </Layout>
         );  
     }
 }

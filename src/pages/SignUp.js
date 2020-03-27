@@ -3,11 +3,10 @@ import { withStyles } from '@material-ui/core/styles'
 import { 
     CssBaseline, Container, 
     Avatar, Typography, 
-    TextField, FormControlLabel, 
-    Checkbox, Button, Link } from '@material-ui/core'
-import NavBar from '../components/NavBar'
+    TextField, Button, Link } from '@material-ui/core'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 import Grid from '@material-ui/core/Grid'
+import Layout from '../components/Layout'
 
 const useStyles = theme => ({
     root: {
@@ -36,8 +35,7 @@ class SignUp extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <div>
-                <NavBar />
+            <Layout>
                 <Container maxWidth="xs">
                     <CssBaseline />
                     <div className={classes.root}>
@@ -128,7 +126,7 @@ class SignUp extends Component {
                         </form>
                     </div>
                 </Container>
-            </div>
+            </Layout>
             
         );
     }

@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import NavBar from '../components/NavBar'
 import { withStyles, Container, Grid, 
-    Card, Typography, CardContent, CardMedia } from '@material-ui/core';
-import axios from 'axios'
-
+    Card, Typography, CardContent, CardMedia, Link, Divider } from '@material-ui/core';
+import { VideoCard } from '../components/VideoCard';
+import Layout from '../components/Layout';
 
 const useStyles = theme => ({
     cardGrid: {
-        paddingTop: theme.spacing(8),
+        paddingTop: theme.spacing(2),
         paddingBottom: theme.spacing(8),
     },
     card: {
         height: '100%',
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: 'column',
     },
     cardMedia: {
         paddingTop: '56.25%', // 16:9 aspect ratio
@@ -23,61 +23,55 @@ const useStyles = theme => ({
     },
 });
 
-const cards = [1, 2, 3, 4];
+const thumbnail = [1, 2, 3, 4, 5, 6, 7, 8];
 
 class Dashboard extends Component {
-
-    state = {
-        posts: []
-    }
-
-    componentDidMount() {
-        axios.get('http://localhost:8080')
-        .then(res => this.setState({posts: res.data.posts}))
-        .catch(err => console.log(err))
-        
-    }
-
-    
-
     render() {
         const { classes } = this.props
-        const data = this.state
-
-        console.log(data.posts);
-        
-
         return (
-            <React.Fragment>
-                <NavBar />
-                <main>
-                    <Container className={classes.cardGrid} maxWidth="md">
-                        <Grid container spacing={4}>
-                            {cards.map((card) => (
-                                <Grid item key={card} xs={12} sm={6} md={4}>
-                                    <Card className={classes.card}>
-                                        <CardMedia
-                                            className={classes.cardMedia}
-                                            imaage="https://source.unsplash.com/random"
-                                            title="Image Title"
-                                        />
-                                        <CardContent className={classes.cardContent}>                                          
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                            {}
-                                            </Typography> 
-                                            <Typography>
-                                                Username
-                                            </Typography>
-                                        </CardContent>
-                                        {/* TODO: Add card actions */}
-                                    </Card>
+            <Layout>
+                <React.Fragment>
+                    <main>
+                        <Container className={classes.cardGrid} maxWidth="md">
+                            <Grid container spacing={2}>
+                                <Grid item xs={12}>
+                                    <Typography variant="h4" component="h2">
+                                        Computer Engineering
+                                    </Typography>
                                 </Grid>
-                            ))}
-                        </Grid>
-    
-                    </Container>
-                </main>
-            </React.Fragment>
+                                {thumbnail.map((card) => (
+                                    <Grid item 
+                                    key={card} 
+                                    xs={6} sm={3}
+                                    alignItems="center"
+                                    alignContent="center">
+                                        <Card className={classes.card}>
+                                            <CardMedia
+                                                className={classes.cardMedia}
+                                                image="https://source.unsplash.com/random"
+                                                title="Image Title"
+                                            />
+                                            <CardContent className={classes.cardContent}>
+                                                <Typography gutterBottom variant="h6" component="h2">
+                                                    Video Description
+                                                </Typography>
+                                                <Link variant="body1" component="h6">
+                                                    {"Class name"}
+                                                </Link>
+                                                <Link variant="body2" component="h6">
+                                                    {"Username"}
+                                                </Link>
+                                            </CardContent>
+                                            {/* TODO: Add card actions */}
+                                        </Card>
+                                    </Grid>
+                                ))}
+                            </Grid>
+                        </Container>
+                    </main>
+                </React.Fragment>
+            </Layout>
+            
         );
     }
 }
