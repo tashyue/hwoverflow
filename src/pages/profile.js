@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import VideoThumbnail from "../components/videoThumbnail";
 import '../style/profile.css';
-import { Button, Typography } from '@material-ui/core'
+import {withStyles, Button, Typography } from '@material-ui/core'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import { makeStyles } from '@material-ui/core/styles'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = theme => ({
     root: {
         
     },
@@ -18,11 +18,14 @@ const useStyles = makeStyles(theme => ({
     button: {
         marginTop: theme.spacing(3), 
     }
-}));
+});
 
-const Profile = () => {
-    const classes = useStyles();
+class Profile extends Component {
+    render() {
+    const { classes } = this.props
     return (
+        <React.Fragment>
+            <main>
         <div className={classes.root}>
             <NavBar />
         <div className ="content">
@@ -35,7 +38,6 @@ const Profile = () => {
                 <img src= "profile_placeholder.png" alt= "Add a Profile Picture" />
             </div>
             <div classname="logout">
-                <Link to="/Login">
                 <div align="center">
                 <Button
                     color='primary'
@@ -43,13 +45,11 @@ const Profile = () => {
                     className={classes.button}
                     size="large"
                 >
-                    logout
+                    <a href="/Login">Logout</a>
                 </Button> 
                 </div>  
-                </Link>
             </div>
             <div classname="edit_profile">
-                <Link to="/Edit_Profile">
                 <div align="center">  
                     <Button
                         color='primary'
@@ -57,10 +57,9 @@ const Profile = () => {
                         className={classes.button}
                         size="large"
                     >
-                        Edit Profile
+                    <a href="/Edit_Profile">Edit Profile</a>
                     </Button>
                 </div> 
-                </Link>
             </div>
 
         </div>
@@ -88,7 +87,9 @@ const Profile = () => {
         </div>
         </div>
     </div>
-    )
+    </main>
+    </React.Fragment>
+    );
 }
-
-export default Profile;
+}
+export default withStyles(useStyles)(Profile);

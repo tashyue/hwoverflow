@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import { Button, Typography } from '@material-ui/core'
+import { withStyles, Button, Typography } from '@material-ui/core'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import { makeStyles } from '@material-ui/core/styles'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = theme => ({
     root: {
         
     },
@@ -16,10 +16,13 @@ const useStyles = makeStyles(theme => ({
     button: {
         marginTop: theme.spacing(3), 
     }
-}));
-const Edit_Profile = () => {
-    const classes = useStyles();
+});
+class Edit_Profile extends Component {
+    render() {
+    const { classes } = this.props
     return (
+        <React.Fragment>
+            <main>       
         <div className={classes.root}>
             <NavBar />
         <div className ="content">
@@ -44,7 +47,6 @@ const Edit_Profile = () => {
                 <img src= "profile_placeholder.png" alt= "Add a Profile Picture" />
             </div>
             <div classname="save_changes">
-                <Link to="/Profile">
                 <div align="center">
                 <Button
                     color='primary'
@@ -52,13 +54,12 @@ const Edit_Profile = () => {
                     className={classes.button}
                     size="large"
                 >
-                    save changes
+                <a href="/Profile">Save Changes</a>
+                
                 </Button> 
                 </div>  
-                </Link>
             </div>
             <div classname="cancel">
-                <Link to="/Profile">
                 <div align="center">  
                     <Button
                         color='primary'
@@ -66,10 +67,9 @@ const Edit_Profile = () => {
                         className={classes.button}
                         size="large"
                     >
-                        cancel
+                    <a href="/Profile">Cancel</a>
                     </Button>
                 </div> 
-                </Link>
             </div>
 
         </div>
@@ -96,7 +96,9 @@ const Edit_Profile = () => {
         </div>
         </div>
     </div>
-    )
+    </main>
+    </React.Fragment>
+    );
 }
-
-export default Edit_Profile;
+}
+export default withStyles(useStyles)(Edit_Profile);
