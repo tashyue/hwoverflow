@@ -24,7 +24,7 @@ const useStyles = theme => ({
       justifyContent: 'flex-end',
     },
   });
-
+  
 class Drawer extends Component {
   state = {
     menu: SubjectMenu
@@ -53,7 +53,6 @@ class Drawer extends Component {
               </IconButton>
             </div>
             <Divider />
-            
               {menu.map((menuItem) => (
                 <ListItem button key={menuItem.text}>
                   <ListItemText primary={menuItem.text} />

@@ -29,7 +29,6 @@ class Footer extends Component {
                     <Typography
                         variant="body2"
                         color="textSecondary"
-                        // paragraph
                         >
                         HW Overflow aims to bring an advanced and progressive educational
                         learning platform to students everywhere. It allows students to 
