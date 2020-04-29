@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import NavBar from '../components/NavBar'
 import { withStyles, Container, Grid, 
-    Card, Typography, CardContent, CardMedia, Link, Divider } from '@material-ui/core';
+    Card, Typography, CardContent, CardMedia, Link, Divider, CardActionArea } from '@material-ui/core';
 import { VideoCard } from '../components/VideoCard';
 import Layout from '../components/Layout';
 
@@ -46,11 +46,14 @@ class Dashboard extends Component {
                                     alignItems="center"
                                     alignContent="center">
                                         <Card className={classes.card}>
-                                            <CardMedia
-                                                className={classes.cardMedia}
-                                                image="https://source.unsplash.com/random"
-                                                title="Image Title"
-                                            />
+                                            <CardActionArea>
+                                                <CardMedia
+                                                    className={classes.cardMedia}
+                                                    image="https://source.unsplash.com/random"
+                                                    title="Image Title"
+                                                />
+                                            </CardActionArea>
+                                            
                                             <CardContent className={classes.cardContent}>
                                                 <Typography gutterBottom variant="h6" component="h2">
                                                     Video Description

@@ -8,6 +8,8 @@ import Upload from './pages/Upload';
 import Profile from './pages/profile';
 import Edit_Profile from './pages/edit_profile';
 import './style/normalize.css'
+import VideoView from './pages/VideoView';
+
 class App extends Component {
     render() {
         return (
@@ -20,6 +22,7 @@ class App extends Component {
                     <Route path='/Upload' component = {Upload} />
                     <Route path='/Profile' component = {Profile} />
                     <Route path='/edit_profile' component = {Edit_Profile} />
+                    <Route path='/video' component={VideoView} />
                 </Switch>
             </Router>
         )
