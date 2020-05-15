@@ -1,88 +1,150 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography, InputBase, makeStyles, fade, Button, IconButton } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu'
-import SearchIcon from '@material-ui/icons/Search'
+import React, { Component } from 'react';
+import { AppBar, Toolbar, withStyles, Button, 
+  IconButton, Menu, MenuItem, Link,} from '@material-ui/core';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import MenuIcon from '@material-ui/icons/Menu';
+import SearchBar from "./SearchBar";
+import Drawer from "./Drawer";
 
-const useStyles = makeStyles(theme => ({
+const drawerWidth = 240;
+
+const useStyles = theme => ({
     root: {
       flexGrow: 1,
-    }, 
+      display: 'flex'
+    },
     menuButton: {
       marginRight: theme.spacing(2),
     },
     title: {
       flexGrow: 1,
     },
-    search: {
-        position: 'relative',
-        borderRadius: theme.shape.borderRadius,
-        backgroundColor: fade(theme.palette.common.white, 0.15),
-        '&:hover': {
-            backgroundColor: fade(theme.palette.common.white, 0.25),
-        },
-        marginLeft: 0,
-        marginRight: theme.spacing(2),
-        width: '100%',
-        [theme.breakpoints.up('sm')]: {
-            marginLeft: theme.spacing(1),
-            width: 'auto',
-        },
+    hide: {
+      display: 'none',
     },
-    searchIcon: {
-        width: theme.spacing(7),
-        height: '100%',
-        position: 'absolute',
-        pointerEvents: 'none',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+    drawer: {
+      width: drawerWidth,
+      flexShrink: 0,
     },
-    inputRoot: {
-        color: 'inherit',
+    drawerPaper: {
+      width: drawerWidth,
     },
-    inputInput: {
-        padding: theme.spacing(1, 1, 1, 7),
-        transition: theme.transitions.create('width'),
-        width: '100%',
-        [theme.breakpoints.up('sm')]: {
-            width: 120,
-            '&:focus': {
-                width: 200,
-            },
-        },
+    drawerHeader: {
+      display: 'flex',
+      alignItems: 'center',
+      padding: theme.spacing(0, 1),
+      // necessary for content to be below app bar
+      ...theme.mixins.toolbar,
+      justifyContent: 'flex-end',
     },
-  }));
+  });
   
-  const NavBar = () => {
-    const classes = useStyles();
+class NavBar extends Component {
+  state = {
+    auth: true,
+    anchorEl: null,
+  }
   
+  // Handle Functions
+  handleMenuOpen = event => {
+    this.setState({
+      anchorEl: event.currentTarget
+    })
+  };
+
+  handleMenuClose = () => {
+    this.setState({
+      anchorEl: null,
+    })
+  };
+
+  handleLogout = event => {
+    this.setState({
+      anchorEl: false,
+      auth: false,
+    })
+  };
+
+  render() {
+    const { classes, toggleDrawer } = this.props;
+    const { auth,  anchorEl } = this.state;
+    const open = Boolean(anchorEl);
+
     return (
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar 
+          position="static"
+        >
           <Toolbar>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            {auth && (
+              <IconButton 
+                edge="start" 
+                color="inherit"
+                aria-label="open drawer"
+                onClick={toggleDrawer}
+              >
+              <MenuIcon />
             </IconButton>
-            <Typography variant="h6" className={classes.title}>
-              HW Overflow
-            </Typography>
-            <div className={classes.search}>
-                <div className={classes.searchIcon}>
-                    <SearchIcon />
-                </div>
-                <InputBase
-                    placeholder="Search..."
-                    classes={{
-                        root: classes.inputRoot,
-                        input: classes.inputInput,
-                    }}
-                    inputProps={{ 'aria-label': 'search'}}
-                />
-            </div>
-            <Button color="inherit">Login</Button>
+            )}
+            <Link 
+              variant="h6" 
+              color="textSecondary" 
+              className={classes.title}
+              underline="none"
+              href="/Dashboard">
+              {"HW Overflow"}
+            </Link>          
+            <SearchBar />
+            {/* Authenticated user */}
+            {auth && (
+              <div>
+                <IconButton
+                color="inherit"
+                aria-haspopup="true"
+                aria-controls="menu-appbar"
+                aria-label="account of current user"
+                onClick={this.handleMenuOpen}
+                >
+                  <AccountCircle />
+                </IconButton>
+                <Menu
+                  id="menu-appbar"
+                  anchorEl={anchorEl}
+                  anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  keepMounted
+                  transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  open={open}
+                  onClose={this.handleMenuClose}
+                >
+                  {/* Set onClick to navigate to respective pages */}
+                  <MenuItem href="/Profile">Profile</MenuItem> 
+                  <MenuItem>Account Settings</MenuItem>
+                  <MenuItem onClick={this.handleLogout}>Logout</MenuItem>
+                </Menu>
+              </div>
+            )}
+            {/* Non-authenticated user */}
+            {!auth && (
+              <Button 
+              color="inherit"
+              variant="text"
+              href="/Login"
+            >
+              Login
+            </Button>
+            )}
           </Toolbar>
         </AppBar>
+        <Drawer open={this.state.drawer} toggleDrawer={toggleDrawer}/>
       </div>
     );
   }
+}
 
-  export default NavBar;
+export default withStyles(useStyles)(NavBar);

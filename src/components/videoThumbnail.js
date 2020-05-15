@@ -1,5 +1,5 @@
 import React, { Component} from 'react'
-import '../style/videoThumbnail.css'
+// import '../style/videoThumbnail.css'
 
 class VideoThumbnail extends Component {
     render() {

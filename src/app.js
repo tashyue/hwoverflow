@@ -3,13 +3,15 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './pages/Home'
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
-import VideoThumbnail from './components/videoThumbnail';
-import Dashboard from './components/dashboard';
+import Dashboard from './pages/Dashboard';
 import Upload from './pages/Upload';
 import Profile from './pages/profile';
 import Edit_Profile from './pages/edit_profile';
 import './style/normalize.css'
+import VideoView from './pages/VideoView';
+
 class App extends Component {
+
     render() {
         return (
             <Router>
@@ -19,8 +21,9 @@ class App extends Component {
                     <Route path='/SignUp' component={SignUp} />
                     <Route path='/Dashboard' component = {Dashboard} />
                     <Route path='/Upload' component = {Upload} />
-                    <Route path='/profile' component = {Profile} />
+                    <Route path='/Profile' component = {Profile} />
                     <Route path='/edit_profile' component = {Edit_Profile} />
+                    <Route path='/video' component={VideoView} />
                 </Switch>
             </Router>
         )
